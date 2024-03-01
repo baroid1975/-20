@@ -3,7 +3,7 @@
  * {
      padding: 0;
      margin: 0;
-     border: 0;
+     border: none;
  }
 
  *,
@@ -27,7 +27,12 @@
  nav,
  footer,
  header,
- aside {
+ aside,
+ .tick::before,
+ .label,
+ .feedback__form__label,
+ .list__item,
+ .our__clients:after {
      display: block;
  }
 
@@ -49,7 +54,8 @@
      font-family: inherit;
  }
 
- input::-ms-clear {
+ input::-ms-clear,
+ .checkbox__input {
      display: none;
  }
 
@@ -60,14 +66,11 @@
  button::-moz-focus-inner {
 
      padding: 0;
-     border: 0;
+     border: none;
  }
 
  a,
- a:visited {
-     text-decoration: none;
- }
-
+ a:visited,
  a:hover {
      text-decoration: none;
  }
@@ -90,15 +93,46 @@
      font-weight: 400;
  }
 
+ .header__navigation,
+ .vector,
+ .header__content,
+ .design__items,
+ .portfolio__wrapper,
+ .portfolio__navigation,
+ .feedback__form,
+ .description__repair,
+ .application,
+ .advantages__details,
+ .design__styles__container,
+ .feedback__card,
+ .card__header,
+ .card__data,
+ .contacts__container,
+ .piggy__bank,
+ .questions__form__checkbox,
+ .questions__form__checkbox label,
+ .footer__content {
+     display: flex;
+ }
+
+ .header__logo,
+ .home,
+ .phone,
+ .header__title-secretion,
+ .design__item:hover,
+ .portfolio__detail h3,
+ .piggy__bank p,
+ .list__item:hover,
+ .adress,
+ .title {
+     color: #E3B873;
+ }
+
  .checkbox__label {
      cursor: pointer;
      color: #FFFFFF;
      font-size: 14px;
      line-height: 23px;
- }
-
- .checkbox__input {
-     display: none;
  }
 
  .tick {
@@ -114,7 +148,6 @@
 
  .tick::before {
      content: "";
-     display: block;
      width: 4px;
      height: 8px;
      border-right: 2px solid #fff;
@@ -135,7 +168,7 @@
      box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
      border-radius: 2px;
      outline: 0;
-     border: 0;
+     border: none;
      padding: 13px 33px;
      color: white;
      text-transform: uppercase;
@@ -149,7 +182,6 @@
      font-family: 'Yeseva One', cursive;
      font-size: 27px;
      line-height: 37px;
-     color: #E3B873;
      text-transform: uppercase;
  }
 
@@ -177,7 +209,6 @@
  }
 
  .vector {
-     display: flex;
      justify-content: center;
      align-items: center;
      margin-top: 12px;
@@ -185,10 +216,6 @@
 
  .vector__stick {
      margin: 0 8px;
- }
-
- .form {
-     background-color: black;
  }
 
  .form h3 {
@@ -201,7 +228,7 @@
  .label {
      color: #FFFFFF80;
      margin-top: 48px;
-     display: block;
+
  }
 
  .input {
@@ -224,28 +251,23 @@
      line-height: 15px;
  }
 
- .header {
+ .header,
+ .portfolio,
+ .form,
+ .footer {
      background-color: black;
  }
 
  .header__content {
-     display: flex;
      justify-content: space-between;
      height: 83px;
      align-items: center;
      text-transform: uppercase;
  }
 
- .header__logo {
-     color: #E3B873;
- }
-
- .header__navigation {
-     display: flex;
- }
 
  .home {
-     color: #E3B873;
+
      font-family: "Nunito Sans";
      font-size: 11px;
      font-style: normal;
@@ -263,7 +285,7 @@
  }
 
  .phone {
-     color: #E3B873;
+
      border-bottom: 1px solid #E3B873;
  }
 
@@ -305,7 +327,7 @@
  }
 
  .header__title-secretion {
-     color: #E3B873;
+
      font-family: 'Yeseva One', cursive;
      text-transform: uppercase;
      font-size: 40px;
@@ -321,7 +343,7 @@
  }
 
  .portfolio {
-     background-color: black;
+
      padding-bottom: 400px;
  }
 
@@ -330,7 +352,7 @@
  }
 
  .design__items {
-     display: flex;
+
      justify-content: space-between;
      width: 679px;
      margin-left: 630px;
@@ -345,7 +367,7 @@
  }
 
  .design__item:hover {
-     color: #E3B873;
+
      border-bottom: 1px solid #E3B873;
  }
 
@@ -361,7 +383,7 @@
  }
 
  .portfolio__wrapper {
-     display: flex;
+
      margin-left: 128px;
  }
 
@@ -395,7 +417,7 @@
      font-family: 'Yeseva One', cursive;
      font-size: 18px;
      line-height: 25px;
-     color: #E3B873;
+
      text-transform: uppercase;
      margin-top: 42px;
  }
@@ -408,7 +430,7 @@
  }
 
  .portfolio__navigation {
-     display: flex;
+
      margin-top: 80px;
  }
 
@@ -460,7 +482,7 @@
  }
 
  .feedback__form {
-     display: flex;
+
      justify-content: space-evenly;
      padding-top: 91px;
  }
@@ -469,7 +491,7 @@
      font-size: 13px;
      line-height: 21px;
      color: #36363680;
-     display: block;
+
      text-align: left;
  }
 
@@ -502,7 +524,7 @@
  }
 
  .description__repair {
-     display: flex;
+
      justify-content: space-between;
      margin-top: 30px;
  }
@@ -554,7 +576,7 @@
  }
 
  .application {
-     display: flex;
+
      margin-top: 180px;
      justify-content: space-between;
  }
@@ -566,7 +588,7 @@
  }
 
  .advantages__details {
-     display: flex;
+
      margin-left: 220px;
      padding-top: 35px;
      padding-bottom: 40px;
@@ -613,7 +635,7 @@
  }
 
  .piggy__bank {
-     display: flex;
+
      margin-top: 50px;
      align-items: center;
  }
@@ -625,7 +647,7 @@
  .piggy__bank p {
      font-size: 18px;
      line-height: 26px;
-     color: #E3B873;
+
  }
 
  .design__styles {
@@ -636,7 +658,7 @@
  }
 
  .design__styles__container {
-     display: flex;
+
      justify-content: space-between;
  }
 
@@ -650,14 +672,14 @@
  }
 
  .list__item {
-     display: block;
+
      color: #FFFFFF;
      font-size: 20px;
      margin-bottom: 40px;
  }
 
  .list__item:hover {
-     color: #E3B873;
+
      text-decoration: underline;
      text-decoration-thickness: 0.66px;
  }
@@ -697,7 +719,7 @@
      position: absolute;
      left: 0;
      top: 100%;
-     display: block;
+
      width: 100%;
      height: 380px;
      background: url(../image/city.png) top;
@@ -706,7 +728,7 @@
  }
 
  .feedback__card {
-     display: flex;
+
      justify-content: space-around;
      column-gap: 54px;
      margin-top: 39px;
@@ -720,7 +742,7 @@
  }
 
  .card__header {
-     display: flex;
+
      align-items: center;
      margin-left: 25px;
  }
@@ -744,7 +766,7 @@
  }
 
  .card__data {
-     display: flex;
+
      align-items: center;
      justify-content: space-around;
      background-color: #E3B873;
@@ -771,7 +793,7 @@
  }
 
  .contacts__container {
-     display: flex;
+
      flex-direction: column;
      align-items: center;
  }
@@ -807,12 +829,12 @@
      max-width: 520px;
      margin: 0 auto;
      padding-top: 55px;
-     display: flex;
+
      justify-content: center;
  }
 
  .questions__form__checkbox label {
-     display: flex;
+
      align-items: center;
  }
 
@@ -821,7 +843,7 @@
  }
 
  .adress {
-     color: #E3B873;
+
      text-align: center;
      margin-top: 52px;
  }
@@ -835,12 +857,10 @@
      margin-right: 12px;
  }
 
- .footer {
-     background-color: black;
- }
+
 
  .footer__content {
-     display: flex;
+
      justify-content: space-between;
      height: 133px;
      align-items: center;
